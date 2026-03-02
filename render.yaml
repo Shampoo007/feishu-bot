@@ -1,0 +1,16 @@
+   services:
+     - type: web
+       name: feishu-bridge
+       runtime: node
+       plan: free
+       buildCommand: npm install
+       startCommand: node server.js
+       envVars:
+         - key: FEISHU_APP_ID
+           value: cli_a92fa6e6f538dbc6
+         - key: FEISHU_APP_SECRET
+           value: HzkcOM9hm1b1ZaiW2fZRfc5Q80bptEYI
+         - key: FEISHU_VERIFICATION_TOKEN
+           value: wmmDlnoJZUZyZOCCeqxv4bewQL5sqVrz
+         - key: FEISHU_ENCRYPT_KEY
+           value: "123"
