@@ -1,1 +1,1 @@
-{"name":"feishu-bridge","version ":"1.0.0","main":"server.js","sc ripts":{"start":"node server.js"},"dependencies":{"exp ress":"^4.18.2"}}
+ {"name":"feishu-bridge","version ":"1.0.0","main":"server.js","sc ripts":{"start":"node server.js"},"dependencies":{"exp ress":"^4.18.2"}}  
