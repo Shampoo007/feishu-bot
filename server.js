@@ -1,4 +1,4 @@
-   const express=require('express'),https =require('https'),app=express();
+const express=require('express'),https =require('https'),app=express();
    app.use(express.json());
    const CFG={id:process.env.FEISHU_APP_I D,secret:process.env.FEISHU_APP_ SECRET,token:process.env.FEISHU_ VERIFICATION_TOKEN};
    let token=null,expire=0;
@@ -18,3 +18,4 @@
  ge});if(data.header?.event_type= =='im.message.receive_v1'){const msg=data.event.message||{},chat= msg.chat_id,sender=data.event.se nder?.sender_id?.open_id||'unkno wn';let
  txt='';try{txt=JSON.parse(msg.content||'{}').text||''}catch(e){}log('消息',`${sender}:${txt.slice(0,30)}`);if(chat)sendMsg(chat,`收到:"${txt}"\n我是OpenClaw，连接成功！`)}res.
  json({code:0,msg:'success'})});
+   app.listen(process.env.PORT||300 0,()=>{console.log('飞书Bridge启动，端 口:',process.env.PORT||3000)});
